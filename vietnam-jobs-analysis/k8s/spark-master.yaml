@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: spark-master
+  template:
+    metadata:
+      labels:
+        component: spark-master
+    spec:
+      containers:
+      - name: spark-master
+        image: docker.io/bitnami/spark:3.5
+        command:
+        - "/opt/bitnami/spark/bin/spark-class"
+        - "org.apache.spark.deploy.master.Master"
+        ports:
+          - containerPort: 7077
+          - containerPort: 7777
+        env:
+          - name: SPARK_MASTER_PORT
+            value: "7077"
+          - name: SPARK_MASTER_WEBUI_PORT
+            value: "7777"
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: spark-master
+spec:
+  type: NodePort
+  ports:
+    - name: webui
+      port: 7777
+      targetPort: 7777
+    - name: spark
+      port: 7077
+      targetPort: 7077
+  selector:
+    component: spark-master
