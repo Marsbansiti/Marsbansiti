@@ -51,3 +51,26 @@
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+
+
+data-engineering-portfolio/
+│
+├── projects/
+│   ├── real-time-stock-dashboard/       # Streamlit project
+│   ├── university-course-recommender/   # ML project
+│   └── hanoi-air-quality/               # Data analysis project
+│
+├── certifications/
+│   ├── aws-data-analytics/              # Certification materials
+│   └── google-data-engineer/            # Study notes
+│
+├── scripts/
+│   ├── etl-pipelines/                   # Sample ETL scripts
+│   ├── data-cleaning/                   # Data preprocessing
+│   └── cloud-automation/                # Terraform/AWS scripts
+│
+├── docs/
+│   ├── resume.pdf                       # Your CV
+│   └── blog-posts/                      # Technical writings
+│
+└── README.md                            # Portfolio overview
