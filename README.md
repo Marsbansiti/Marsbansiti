@@ -1,6 +1,6 @@
-# ✨🌈 Hello World! I'm Mars Bansiti 👋🌟
+# ✨ Hello World! I'm Mars Bansiti 👋🌟
 
-## 🚀 Senior Data Engineer | 💫 Big Data Enthusiast | 🌟 Cloud Solutions Architect | 🔮 Data Wizard
+##  Data Engineer | 💫 Big Data Enthusiast | 🌟 Cloud Solutions Architect 
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=0EA5E9&center=true&vCenter=true&width=435&lines=Data+Engineer+Extraordinaire;Cloud+Solutions+Architect;Big+Data+Enthusiast;Problem+Solver+✨" alt="Typing SVG" />
