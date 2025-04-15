@@ -128,11 +128,3 @@ Create a `docs/` folder with `index.html`:
 ![Build](https://img.shields.io/github/actions/workflow/status/Marsbansiti/Data-Engineering-Projects/ci.yml)
 ```
 
-This setup:
-- Showcases your technical skills visually
-- Highlights major projects with metrics
-- Provides multiple contact options
-- Demonstrates your expertise through stats
-- Makes your profile stand out with emojis and badges
-
-Would you like me to create specific project README templates or add any particular sections?
