@@ -12,10 +12,11 @@
 
 <div align="center">
   <a href="mailto:Marsbansiti@gmail.com"><img src="https://img.shields.io/badge/Email-Marsbansiti%40gmail.com-blue?style=for-the-badge&logo=gmail"></a>
-  <a href="https://www.linkedin.com/in/mars-bansiti"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"></a>
   <a href="https://marsbansiti.github.io/portfolio"><img src="https://img.shields.io/badge/Portfolio-View%20Projects-green?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/Marsbansiti"><img src="https://img.shields.io/badge/GitHub-Marsbansiti-black?style=for-the-badge&logo=github"></a>
   <a href="https://zalo.me/565799694"><img src="https://img.shields.io/badge/Zalo-%2B84%20565799694-blue?style=for-the-badge"></a>
 </div>
+v>
 
 ---
 
