@@ -1,292 +1,157 @@
-<div align="center">
-  <h1>🌟✨ Data Engineering Portfolio ✨🌟</h1>
-  <p>🚀 A showcase of scalable, efficient, and innovative data engineering solutions 🚀</p>
+# ✨🌈 Hello World! I'm Mars Bansiti 👋🌟
 
-  <img src="https://img.shields.io/badge/Data-Engineering-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/ETL-Pipelines-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Big-Data-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Cloud-Solutions-green?style=for-the-badge" />
-</div>
-
----
-
-## 🔍 Portfolio Overview ✨
-
-This repository contains a collection of data engineering projects demonstrating expertise in building scalable data solutions, ETL processes, real-time data processing, and cloud-based analytics platforms. Each project showcases practical implementations of different data engineering concepts and cutting-edge technologies. ✨
+## 🚀 Senior Data Engineer | 💫 Big Data Enthusiast | 🌟 Cloud Solutions Architect | 🔮 Data Wizard
 
 <div align="center">
-  <img src="./assets/data-engineering-banner.png" alt="Data Engineering Banner" width="750px" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=0EA5E9&center=true&vCenter=true&width=435&lines=Data+Engineer+Extraordinaire;Cloud+Solutions+Architect;Big+Data+Enthusiast;Problem+Solver+✨" alt="Typing SVG" />
 </div>
 
----
-
-## 🚀 Featured Projects ✨
-
-### 1. 🌊🔄 [Real-time Data Processing Pipeline](./real-time-processing)
-
-A robust data pipeline for processing streaming data in real-time using Apache Kafka and Spark Streaming. ⚡
-
-<details>
-<summary><b>🔍 View Project Details ✨</b></summary>
-
-**🛠️ Technologies:**
-- 🔄 Apache Kafka 
-- ⚡ Spark Streaming
-- 🐍 Python
-- ☁️ AWS (S3, EC2)
-- 🐳 Docker
-
-**✨ Key Features:**
-- ⏱️ Real-time data ingestion and processing
-- 🛡️ Fault-tolerant architecture
-- 📈 Horizontal scalability
-- 📊 Interactive monitoring dashboard
-- 🧪 Comprehensive logging and error handling
-
-**📋 Project Achievements:**
-- 📉 Reduced data processing latency by 75%
-- 🔍 Improved data quality with real-time validation
-- 🚀 Scaled to handle 10,000+ events per second
-
-<div align="center">
-  <img src="./assets/realtime-pipeline.png" alt="Real-time Pipeline Architecture" width="600px" />
-</div>
-</details>
-
----
-
-### 2. 🏛️💎 [Data Warehouse Solution](./data-warehouse)
-
-An end-to-end data warehouse implementation with automated ETL processes and business intelligence dashboards. 🧠
-
-<details>
-<summary><b>🔍 View Project Details ✨</b></summary>
-
-**🛠️ Technologies:**
-- ❄️ Snowflake
-- 🔄 Apache Airflow
-- 🧱 dbt (data build tool)
-- 🐍 Python
-- 📊 Looker/Tableau
-
-**✨ Key Features:**
-- 🤖 Automated ETL workflows
-- 🧩 Data modeling (Star schema)
-- ✅ Data quality checks
-- 📈 Business intelligence dashboards
-- 🔄 Incremental data loading
-
-**📋 Project Achievements:**
-- ⏱️ Reduced report generation time from hours to minutes
-- 🔍 Implemented 99.9% data accuracy validation
-- 💰 Optimized storage costs by 40%
-
-<div align="center">
-  <img src="./assets/data-warehouse.png" alt="Data Warehouse Architecture" width="600px" />
-</div>
-</details>
-
----
-
-### 3. ⚡🔋 [ETL Pipeline Optimization](./etl-optimization)
-
-Performance optimization of existing ETL processes to improve throughput and reduce processing time. 🚀
-
-<details>
-<summary><b>🔍 View Project Details ✨</b></summary>
-
-**🛠️ Technologies:**
-- 🔥 PySpark
-- 🧩 AWS Glue
-- 🐍 Python
-- 📊 CloudWatch
-- 🗄️ S3
-
-**✨ Key Features:**
-- ⚡ Performance tuning
-- 💰 Cost optimization
-- 🚨 Monitoring and alerting
-- 🛡️ Error handling and recovery
-- ✅ Data quality validation
-
-**📋 Project Achievements:**
-- 🚀 Improved processing speed by 60%
-- 💰 Reduced computing costs by 45%
-- 📉 Decreased failure rate to less than 0.1%
-
-<div align="center">
-  <img src="./assets/etl-optimization.png" alt="ETL Optimization Results" width="600px" />
-</div>
-</details>
-
----
-
-### 4. 📈📊 [Streaming Analytics Platform](./streaming-analytics)
-
-A platform for analyzing streaming data from IoT devices with real-time anomaly detection. 🔍
-
-<details>
-<summary><b>🔍 View Project Details ✨</b></summary>
-
-**🛠️ Technologies:**
-- 🌊 Apache Flink
-- 🔄 Kafka
-- 🔍 ElasticSearch
-- 📊 Kibana
-- 🐍 Python
-
-**✨ Key Features:**
-- ⏱️ Real-time analytics
-- 🚨 Anomaly detection
-- 📊 Time-series analysis
-- 📱 Dashboard visualization
-- 📈 Scalable architecture
-
-**📋 Project Achievements:**
-- ⚡ Processed 1M+ events per minute
-- 🔍 Detected anomalies with 99.7% accuracy
-- ⏱️ Reduced detection time to under 5 seconds
-
-<div align="center">
-  <img src="./assets/streaming-analytics.png" alt="Streaming Analytics Architecture" width="600px" />
-</div>
-</details>
-
----
-
-### 5. 🌊🏞️ [Data Lake Implementation](./data-lake)
-
-A scalable data lake solution for storing and processing large volumes of structured and unstructured data. 💾
-
-<details>
-<summary><b>🔍 View Project Details ✨</b></summary>
-
-**🛠️ Technologies:**
-- 🗄️ AWS S3
-- 🔷 Delta Lake
-- 🔥 Spark
-- 🧩 AWS Glue
-- 🐍 Python
-
-**✨ Key Features:**
-- 📚 Data cataloging
-- 🔒 ACID transactions
-- 📋 Schema evolution
-- 🧩 Partitioning strategies
-- 🔍 Query optimization
-
-**📋 Project Achievements:**
-- 📊 Unified access to 20+ data sources
-- ⚡ Improved query performance by 70%
-- 🔒 Enhanced data governance and security
-
-<div align="center">
-  <img src="./assets/data-lake.png" alt="Data Lake Architecture" width="600px" />
-</div>
-</details>
-
----
-
-## 🛠️ Skills Demonstrated ✨
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><b>🔄 ETL/ELT Processes</b></td>
-      <td align="center"><b>🔍 Big Data Processing</b></td>
-      <td align="center"><b>🌊 Stream Processing</b></td>
-    </tr>
-    <tr>
-      <td>✨ Design and implementation of Extract, Transform, Load pipelines</td>
-      <td>🔥 Apache Spark, Hadoop, Flink</td>
-      <td>⚡ Kafka, Spark Streaming, Flink</td>
-    </tr>
-    <tr>
-      <td align="center"><b>🏛️ Data Warehousing</b></td>
-      <td align="center"><b>⏱️ Workflow Management</b></td>
-      <td align="center"><b>☁️ Cloud Computing</b></td>
-    </tr>
-    <tr>
-      <td>❄️ Snowflake, BigQuery, Redshift</td>
-      <td>🔄 Apache Airflow, AWS Step Functions</td>
-      <td>☁️ AWS, GCP, Azure</td>
-    </tr>
-    <tr>
-      <td align="center"><b>🏗️ Infrastructure as Code</b></td>
-      <td align="center"><b>🐳 Containerization</b></td>
-      <td align="center"><b>💻 Programming</b></td>
-    </tr>
-    <tr>
-      <td>🌐 Terraform, CloudFormation</td>
-      <td>🐳 Docker, Kubernetes</td>
-      <td>🐍 Python, Scala, SQL</td>
-    </tr>
-  </table>
-</div>
-
----
-
-## 📂 Project Structure ✨
-
-Each project directory contains:
-
-1. 📄 **README.md**: Detailed project documentation
-2. 🏗️ **Architecture Diagram**: Visual representation of the solution
-3. 💻 **Source Code**: Implementation details
-4. 🚀 **Setup Instructions**: Steps to deploy and run
-5. 📊 **Sample Data**: For testing and demonstration
-6. 📚 **Documentation**: Additional implementation details
-
----
-
-## 🎯 Data Engineering Best Practices ✨
-
-<details>
-<summary><b>🔍 View Best Practices ✨</b></summary>
-
-### 📏 Design Principles
-
-- 🔄 **Idempotency**: Processes can be run multiple times without side effects
-- 🧩 **Modularity**: Components are designed for reuse and easy maintenance
-- 🔍 **Observability**: Comprehensive monitoring and logging
-- 🛡️ **Resilience**: Fault-tolerant with robust error handling
-- 📈 **Scalability**: Horizontally scalable to handle growing data volumes
-
-### 🚀 Implementation Guidelines
-
-- 🧪 **Testing**: Comprehensive unit and integration tests
-- 📚 **Documentation**: Well-documented code and architecture
-- 🔐 **Security**: Follow least privilege principle and encrypt sensitive data
-- 📊 **Data Quality**: Validation at every stage of the pipeline
-- ⚙️ **Automation**: Automate deployment, testing, and monitoring
-
-</details>
-
----
-
-## 📚 Resources & Learning Materials ✨
-
-- 📘 [Data Engineering Best Practices](https://link-to-resource) 📝
-- 📗 [ETL vs ELT - When to Use Each](https://link-to-resource) 🔄
-- 📙 [Data Pipeline Design Patterns](https://link-to-resource) 🏗️
-- 📕 [Real-time Processing Architectures](https://link-to-resource) ⚡
-- 📓 [Data Mesh Architecture](https://link-to-resource) 🌐
-
----
-
-## 📫 Get in Touch ✨
-
-Feel free to reach out if you have any questions or would like to discuss any of these projects! 🤝
+<p align="center">
+  ✨ Data Engineer with 5+ years of experience specializing in building scalable data pipelines and ETL processes. Proficient in big data technologies like Apache Spark, Kafka, and Airflow. Expert in designing and implementing cloud-based data solutions on AWS, GCP, and Azure. 🌈✨
+</p>
 
 <div align="center">
   <a href="mailto:Marsbansiti@gmail.com"><img src="https://img.shields.io/badge/Email-Marsbansiti%40gmail.com-blue?style=for-the-badge&logo=gmail"></a>
   <a href="https://www.linkedin.com/in/mars-bansiti"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"></a>
   <a href="https://marsbansiti.github.io/portfolio"><img src="https://img.shields.io/badge/Portfolio-View%20Projects-green?style=for-the-badge&logo=github"></a>
+  <a href="https://zalo.me/565799694"><img src="https://img.shields.io/badge/Zalo-%2B84%20565799694-blue?style=for-the-badge"></a>
 </div>
 
 ---
 
+## 💼 Professional Experience ✨
+
+### 👨‍💻 **Senior Data Engineer** @ TechVision Vietnam *(03/2022 – 02/2025)*
+- 🔄 Designed and implemented scalable data pipelines using Apache Spark and Airflow ✨
+- ⚡ Built real-time data processing systems with Kafka and Flink 🌊
+- 🏛️ Developed data warehouse solutions using Snowflake and BigQuery 💎
+- 🚀 Optimized ETL processes reducing processing time by 60% ⏱️
+
+### 👨‍💻 **Data Engineer** @ Digital Solutions Co. *(06/2019 – 02/2022)*
+- 🔄 Built batch and streaming data pipelines using Python and PySpark 🐍
+- 🗄️ Developed data models and schemas for analytics databases 📊
+- 🔌 Integrated various data sources including APIs, databases, and files 🔌
+- 📊 Implemented monitoring and alerting for data pipelines 🚨
+
+---
+
+## 🛠️ Technical Skills ✨
+
 <div align="center">
-  <h3>⭐✨ Star this repository if you find it helpful! ✨⭐</h3>
-  <p>🌟💫 Created with passion by <a href="https://github.com/Marsbansiti">Mars Bansiti</a> 💫🌟</p>
+  <h3>💾 Data Processing & ETL 🔄</h3>
+  <img src="https://img.shields.io/badge/Apache-Spark-orange?style=for-the-badge&logo=apache-spark" />
+  <img src="https://img.shields.io/badge/Apache-Kafka-black?style=for-the-badge&logo=apache-kafka" />
+  <img src="https://img.shields.io/badge/Apache-Airflow-blue?style=for-the-badge&logo=apache-airflow" />
+  <img src="https://img.shields.io/badge/Apache-Beam-yellow?style=for-the-badge&logo=apache" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  
+  <h3>🗄️ Data Storage & Databases 💾</h3>
+  <img src="https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cassandra-1287B1?style=for-the-badge&logo=apache-cassandra&logoColor=white" />
+  <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazon-dynamodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redshift-8C4FFF?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  
+  <h3>☁️ Cloud & DevOps 🌩️</h3>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" />
+</div>
+
+---
+
+## 🎓 Education & Certifications ✨
+
+### 📚 Education 🏫
+- 🎓 **Master of Computer Science (MSc)** - National University of Hanoi, Vietnam *(2017 – 2019)* 🌟
+- 🎓 **Bachelor of Software Engineering (B.Tech)** - Delhi University, India *(2013 – 2017)* 🌟
+
+### 🏆 Certifications 📜
+- ✅ **AWS Certified Data Analytics** *(2023)* 🏅
+- ✅ **Google Cloud Professional Data Engineer** *(2022)* 🏅
+- ✅ **Apache Spark Certification - Databricks** *(2021)* 🏅
+
+---
+
+## 📊 Featured Projects ✨
+
+### 🌊 [Real-time Data Processing Pipeline](https://github.com/Marsbansiti/Data-Engineering-Projects-main/Data-Engineering-Projects-main/real-time-processing) 🔄
+A Kafka and Spark Streaming based pipeline for processing high-volume data in real-time with visualization dashboards. ⚡
+- **🛠️ Technologies**: Apache Kafka, Spark Streaming, Python, AWS ✨
+- **✨ Features**: Real-time processing, Dashboard integration, Scalable architecture 🚀
+
+### 🏛️ [Data Warehouse Solution](https://github.com/Marsbansiti/Data-Engineering-Projects-main/Data-Engineering-Projects-main/data-warehouse) 💎
+End-to-end data warehouse implementation with automated ETL processes and business intelligence reports. 📊
+- **🛠️ Technologies**: Snowflake, Airflow, dbt, Python ✨
+- **✨ Features**: Automated ETL, Star schema design, Business intelligence dashboards 📈
+
+### ⚡ [ETL Pipeline Optimization](https://github.com/Marsbansiti/Data-Engineering-Projects-main/Data-Engineering-Projects-main/etl-optimization) 🔋
+Performance optimization of existing ETL processes improving throughput and reducing processing time. ⏱️
+- **🛠️ Technologies**: PySpark, AWS Glue, Python ✨
+- **✨ Features**: Performance optimization, Cost reduction, Monitoring and alerting 📉
+
+### 📈 [Streaming Analytics Platform](https://github.com/Marsbansiti/Data-Engineering-Projects-main/Data-Engineering-Projects-main/streaming-analytics) 📊
+A platform for analyzing streaming data from IoT devices with real-time anomaly detection. 🔍
+- **🛠️ Technologies**: Apache Flink, Kafka, ElasticSearch, Python ✨
+- **✨ Features**: Real-time analytics, Anomaly detection, Scalable architecture 📡
+
+---
+
+## 📈 GitHub Stats ✨
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Marsbansiti&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Marsbansiti&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Marsbansiti&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub Trophy" />
+</div>
+
+---
+
+## 🌱 I'm currently working on ✨
+
+- 🔄 Advanced data lake architectures with Delta Lake 💧
+- ⚡ Real-time data processing with Flink and Kafka 🌊
+- 🤖 MLOps pipelines for automated model deployment 🧠
+- 🧮 Exploring distributed computing with Ray ☀️
+
+---
+
+## 📫 How to reach me ✨
+
+- 📧 Email: [Marsbansiti@gmail.com](mailto:Marsbansiti@gmail.com) ✉️
+- 💬 Zalo: +84 565799694 📱
+- 🏙️ Location: Hà Nội, Việt Nam 🇻🇳
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Marsbansiti&color=blueviolet&style=for-the-badge" alt="Profile views" />
+</div>
+
+<div align="center">
+  <a href="https://github.com/Marsbansiti">
+    <img src="https://img.shields.io/github/followers/Marsbansiti?style=for-the-badge&logo=github" alt="GitHub followers" />
+  </a>
+</div>
+
+<div align="center">
+  <h3>🤝 Let's connect and build amazing data solutions together! ✨🌟</h3>
 </div>
