@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Bansiti - Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --accent: #f59e0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        
+        /* Header section */
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 4px solid var(--accent);
+        }
+        
+        .header-content {
+            flex: 1;
+            z-index: 2;
+        }
+        
+        .name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .profile-img-container {
+            position: absolute;
+            right: 40px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 3;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            background-color: rgba(255,255,255,0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+        
+        .contact-item i {
+            width: 18px;
+            text-align: center;
+            color: var(--accent);
+        }
+        
+        .contact-link {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Main content */
+        .main-content {
+            display: flex;
+            position: relative;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 35%;
+            padding: 30px;
+            background-color: var(--light);
+            border-right: 1px solid var(--light-gray);
+        }
+        
+        /* Content */
+        .content {
+            width: 65%;
+            padding: 30px;
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+        
+        /* Profile summary */
+        .profile-summary {
+            background-color: white;
+            padding: 25px;
+            margin: -30px 30px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--accent);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Experience items */
+        .experience-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 25px;
+            border-left: 2px solid var(--light-gray);
+        }
+        
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .experience-item:before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
+        
+        .experience-date {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .experience-location {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .experience-location i {
+            font-size: 0.8rem;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 3px;
+            font-size: 1.1rem;
+        }
+        
+        .experience-company {
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+        
+        .experience-duties {
+            list-style-type: none;
+        }
+        
+        .experience-duties li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .experience-duties li:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .education-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .education-date {
+            color: var(--gray);
+            font-size: 0.85rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: var(--primary);
+        }
+        
+        .education-school {
+            font-weight: 500;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Skills */
+        .skills-list {
+            list-style-type: none;
+        }
+        
+        .skills-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .skills-list li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        /* Skills group */
+        .skills-group {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .skills-group-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        
+        .skills-group-title i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .cert-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .cert-name {
+            font-weight: 500;
+            margin-bottom: 3px;
+            color: var(--primary);
+        }
+        
+        .cert-issuer {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        /* Languages */
+        .language-item {
+            margin-bottom: 15px;
+        }
+        
+        .language-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .language-level {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: var(--light-gray);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--light-gray);
+        }
+        
+        /* Hobbies */
+        .hobbies {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .hobby-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .hobby-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hobby-item i {
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            margin-bottom: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--primary);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .project-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+        
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .project-description {
+            margin-bottom: 15px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .project-tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .project-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(3px);
+        }
+        
+        .project-link i {
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Technical Knowledge Section */
+        .tech-knowledge {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .tech-group {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .tech-group-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tech-group-title i {
+            color: var(--accent);
+        }
+        
+        .tech-group p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar, .content {
+                width: 100%;
+            }
+            
+            .profile-img-container {
+                position: static;
+                margin: 0 auto 20px;
+                transform: none;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .tech-knowledge {
+                grid-template-columns: 1fr;
+            }
+            
+            .hobbies {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .job-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="header-content">
+                <h1 class="name">Mars Bansiti</h1>
+                <h2 class="job-title">Data Engineer</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hà Nội, Việt Nam</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+84565799694" class="contact-link">+84 565799694</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:Marsbansiti@gmail.com" class="contact-link">Marsbansiti@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Marsbansiti" target="_blank" class="contact-link">Marsbansiti</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-img-container">
+                <img src="https://i.ibb.co/F4xhBWvJ/AP1-Gcz-Na-QNOtzt-M8-Ime-DMit-Mwv-KORb-K-i-L6n-A5-Nzn54s-XRAy5d-FZw-CVfp-HU-5ox-N6eky-TMa-Yn015oo-YV.jpg" alt="Mars Bansiti" class="profile-img">
+            </div>
+        </div>
+
+        <!-- Profile Summary -->
+        <div class="profile-summary">
+            <p>Data Engineer with 5+ years of experience specializing in building scalable data pipelines and ETL processes. Proficient in big data technologies like Apache Spark, Kafka, and Airflow. Expert in designing and implementing cloud-based data solutions on AWS, GCP, and Azure. Experienced in data warehouse design and implementation across SQL and NoSQL technologies. Passionate about building robust, efficient data infrastructure that enables data-driven decision making.</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Sidebar -->
+            <div class="sidebar">
+                <!-- Education Section -->
+                <div class="section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="education-item">
+                        <div class="education-date">2017 – 2019</div>
+                        <div class="education-degree">Master of Computer Science (MSc)</div>
+                        <div class="education-school">National University of Hanoi, Vietnam</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-date">2013 – 2017</div>
+                        <div class="education-degree">Bachelor of Software Engineering (B.Tech)</div>
+                        <div class="education-school">Delhi University, India</div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">
+                            <i class="fas fa-database"></i>
+                            Data Engineering
+                        </h4>
+                        <ul class="skills-list">
+                            <li>Apache Airflow, Kafka, Spark</li>
+                            <li>ETL/ELT with Python & PySpark</li>
+                            <li>Data pipeline optimization</li>
+                            <li>CI/CD for data infrastructure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">
+                            <i class="fas fa-server"></i>
+                            Database Systems
+                        </h4>
+                        <ul class="skills-list">
+                            <li>SQL (MySQL, PostgreSQL, Oracle)</li>
+                            <li>NoSQL (MongoDB, Cassandra)</li>
+                            <li>Data warehousing (Snowflake, BigQuery)</li>
+                            <li>Data lakes (S3, Azure Data Lake)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">
+                            <i class="fas fa-code"></i>
+                            Programming
+                        </h4>
+                        <ul class="skills-list">
+                            <li>Python (Pandas, NumPy, PySpark)</li>
+                            <li>SQL & Shell scripting</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>Git version control</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">
+                            <i class="fas fa-chart-line"></i>
+                            Data Analysis
+                        </h4>
+                        <ul class="skills-list">
+                            <li>Power BI & Tableau</li>
+                            <li>Statistical analysis</li>
+                            <li>Data visualization</li>
+                            <li>Dashboard development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="section">
+                    <h3 class="section-title">Certifications</h3>
+                    <div class="cert-item">
+                        <div class="cert-name">AWS Certified Data Analytics</div>
+                        <div class="cert-issuer">Amazon Web Services (2023)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Google Cloud Professional Data Engineer</div>
+                        <div class="cert-issuer">Google Cloud (2022)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Apache Spark Certification</div>
+                        <div class="cert-issuer">Databricks (2021)</div>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="section">
+                    <h3 class="section-title">Languages</h3>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span>English</span>
+                            <span class="language-level">Professional</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span>Vietnamese</span>
+                            <span class="language-level">Basic</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Section -->
+                <div class="section">
+                    <h3 class="section-title">Soft Skills</h3>
+                    <div class="tags">
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Agile Methodology</span>
+                        <span class="tag">Attention to Detail</span>
+                        <span class="tag">Teamwork</span>
+                        <span class="tag">Self-motivated</span>
+                        <span class="tag">Mentoring</span>
+                    </div>
+                </div>
+
+                <!-- Hobbies Section -->
+                <div class="section">
+                    <h3 class="section-title">Interests</h3>
+                    <div class="hobbies">
+                        <div class="hobby-item">
+                            <i class="fas fa-blog"></i>
+                            <span>Tech Blogging</span>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Photography</span>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-hiking"></i>
+                            <span>Hiking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="content">
+                <!-- Experience Section -->
+                <div class="section">
+                    <h3 class="section-title">Professional Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-date">03/2022 – 02/2025</div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Hà Nội, Việt Nam
+                        </div>
+                        <div class="experience-title">Senior Data Engineer</div>
+                        <div class="experience-company">TechVision Vietnam</div>
+                        <ul class="experience-duties">
+                            <li>Designed and implemented scalable data pipelines using Apache Spark and Airflow</li>
+                            <li>Built real-time data processing systems with Kafka and Flink</li>
+                            <li>Developed data warehouse solutions using Snowflake and BigQuery</li>
+                            <li>Optimized ETL processes reducing processing time by 60%</li>
+                            <li>Implemented CI/CD pipelines for data infrastructure using GitHub Actions</li>
+                            <li>Mentored junior data engineers and conducted code reviews</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-date">06/2019 – 02/2022</div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Đà Nẵng, Việt Nam
+                        </div>
+                        <div class="experience-title">Data Engineer</div>
+                        <div class="experience-company">Digital Solutions Co.</div>
+                        <ul class="experience-duties">
+                            <li>Built batch and streaming data pipelines using Python and PySpark</li>
+                            <li>Developed data models and schemas for analytics databases</li>
+                            <li>Integrated various data sources including APIs, databases, and files</li>
+                            <li>Implemented monitoring and alerting for data pipelines</li>
+                            <li>Created comprehensive documentation for data infrastructure</li>
+                            <li>Collaborated with data scientists on feature engineering</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-date">02/2019 – 05/2019</div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Hồ Chí Minh, Việt Nam
+                        </div>
+                        <div class="experience-title">Data Analyst</div>
+                        <div class="experience-company">WebCraft Solutions</div>
+                        <ul class="experience-duties">
+                            <li>Developed SQL queries and reports for business intelligence</li>
+                            <li>Created data visualizations and dashboards</li>
+                            <li>Cleaned and prepared datasets for analysis</li>
+                            <li>Identified data quality issues and implemented improvements</li>
+                            <li>Automated reporting processes using Python scripts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-date">05/2018 – 01/2019</div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, Ấn Độ
+                        </div>
+                        <div class="experience-title">Data Intern</div>
+                        <div class="experience-company">CodeCraft Technologies</div>
+                        <ul class="experience-duties">
+                            <li>Assisted in data cleaning and preparation tasks</li>
+                            <li>Participated in database design and implementation</li>
+                            <li>Learned and applied data analysis techniques</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Projects Section -->
+                <div class="section projects-section">
+                    <h3 class="section-title">Key Projects</h3>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="project-title">Data Engineering Solutions</h4>
+                        </div>
+                        <p class="project-description">Collection of production-grade data engineering implementations including ETL pipelines, real-time processing systems, and data warehouse solutions. Demonstrated expertise in Apache ecosystem and cloud data technologies.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Apache Spark</span>
+                            <span class="project-tag">Airflow</span>
+                            <span class="project-tag">Kafka</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Pipelines</span>
+                        </div>
+                        <a href="https://github.com/Marsbansiti/Marsbansiti/tree/main/Data-Engineering-Projects-main/Data-Engineering-Projects-main" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Project Repository</span>
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h4 class="project-title">Bank Customer Analytics</h4>
+                        </div>
+                        <p class="project-description">End-to-end analytics platform for banking customer data with segmentation, behavior analysis, and predictive modeling. Delivered actionable insights through interactive dashboards.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Customer Analytics</span>
+                        </div>
+                        <a href="https://github.com/Marsbansiti/Marsbansiti/tree/main/BankAnalyze" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Project Repository</span>
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4 class="project-title">Vietnam Jobs Market Analysis</h4>
+                        </div>
+                        <p class="project-description">Comprehensive analysis of Vietnam's job market trends with salary distributions, in-demand skills, and regional variations. Included automated data collection and interactive visualizations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Web Scraping</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Market Analysis</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Tableau</span>
+                        </div>
+                        <a href="https://github.com/Marsbansiti/Marsbansiti/tree/main/vietnam-jobs-analysis" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Project Repository</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Technical Knowledge Section -->
+                <div class="section">
+                    <h3 class="section-title">Technical Expertise</h3>
+                    <div class="tech-knowledge">
+                        <div class="tech-group">
+                            <h4 class="tech-group-title">
+                                <i class="fas fa-network-wired"></i>
+                                Data Architecture
+                            </h4>
+                            <p>Expert in designing scalable data pipelines, stream processing systems, and data lakes. Proficient with Apache ecosystem (Spark, Airflow, Kafka), cloud data solutions, and containerization technologies.</p>
+                        </div>
+                        <div class="tech-group">
+                            <h4 class="tech-group-title">
+                                <i class="fas fa-cogs"></i>
+                                Data Processing
+                            </h4>
+                            <p>Strong proficiency in ETL/ELT processes, data integration patterns, fault-tolerant processing, data cleansing techniques, schema design, and building resilient data pipelines for high-volume processing.</p>
+                        </div>
+                        <div class="tech-group">
+                            <h4 class="tech-group-title">
+                                <i class="fas fa-chart-bar"></i>
+                                Data Analysis
+                            </h4>
+                            <p>Skilled in descriptive and diagnostic analytics, statistical methods, exploratory data analysis, and supporting data scientists with feature engineering and dataset preparation for machine learning models.</p>
+                        </div>
+                        <div class="tech-group">
+                            <h4 class="tech-group-title">
+                                <i class="fas fa-database"></i>
+                                Database Systems
+                            </h4>
+                            <p>Comprehensive knowledge of database architecture, indexing strategies, and optimization techniques across SQL and NoSQL platforms. Experienced in distributed database systems and cloud-native solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
