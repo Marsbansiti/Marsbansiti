@@ -1,0 +1,14 @@
+{
+    "name": "ls_au_health_expnd_ws",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureDatabricks",
+        "typeProperties": {
+            "domain": "https://adb-914818712572066.6.azuredatabricks.net",
+            "authentication": "MSI",
+            "workspaceResourceId": "/subscriptions/**********/resourceGroups/au-health-expnd-rg/providers/Microsoft.Databricks/workspaces/au-health-expnd-ws",
+            "existingClusterId": "**********"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "ls_adls_auhealthexpnd23dl",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureBlobFS",
+        "typeProperties": {
+            "url": "https://auhealthexpnd23dl.dfs.core.windows.net/",
+            "encryptedCredential": "**********"
+        }
+    }
+}

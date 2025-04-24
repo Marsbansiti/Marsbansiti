@@ -1,0 +1,50 @@
+{
+    "name": "pl_ingest_auhealthexpnd_data",
+    "properties": {
+        "activities": [
+            {
+                "name": "ingest_population_file",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/AU-Health-Expnd/ingest/1.ingest_population_file"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_au_health_expnd_ws",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "ingest_health_expnd_file",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/AU-Health-Expnd/ingest/2.ingest_expenditure_file"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_au_health_expnd_ws",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2023-12-22T05:45:03Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

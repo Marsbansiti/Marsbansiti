@@ -1,0 +1,50 @@
+{
+    "name": "pl_transform_auhealthexpnd_data",
+    "properties": {
+        "activities": [
+            {
+                "name": "trans_fund_source_with_pop",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/AU-Health-Expnd/trans/fund_source_with_pop"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_au_health_expnd_ws",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "trans_sector_expnd_with_pop",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/AU-Health-Expnd/trans/sector_expnd_with_pop"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_au_health_expnd_ws",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2023-12-22T05:45:03Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

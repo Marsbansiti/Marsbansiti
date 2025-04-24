@@ -1,0 +1,12 @@
+[
+    {
+        "sourceBaseURL":"https://raw.githubusercontent.com",
+        "sourceRelativeURL":"Andy-Hoang/Azure-Data-Engineering-with-AU-Health-Expnd/main/raw-data/australian_health_expenditure.csv",
+        "sinkFileName":"au_health_expnd.csv"
+    },
+    {
+        "sourceBaseURL":"https://raw.githubusercontent.com",
+        "sourceRelativeURL":"Andy-Hoang/Azure-Data-Engineering-with-AU-Health-Expnd/main/raw-data/australian_population_by_state.csv",
+        "sinkFileName":"au_population.csv"
+    }
+]
